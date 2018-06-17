@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    
+    <title>Train Scheduler</title>
+    <style>
+        h1,
+        h2,
+        h3 {
+            color: rgb(237, 149, 0)
+        }
+    </style>
+</head>
+
+<body style="background-color: rgb(156, 103, 12)">
+    <header class="jumbotron container text-center" style="background-color: rgb(182, 65, 2) ">
+        <h1>I hear the train a coming</h1>
+        <h3>It's rollin 'round the bend..</h3>
+        <h4>This is the ugliest color palette I could think of</h4>
+    </header>
+    <main class="jumbotron container" style="background-color: rgb(12, 56, 120)">
+        <h2>Train Schedule</h2>
+        <table class="table">
+            <thead style="background-color: beige">
+                <tr style="border-bottom: solid 3px black">
+                    <th scope="col-lg">Train Name</th>
+                    <th scope="col-lg">Destination</th>
+                    <th scope="col-lg">Frequency (min)</th>
+                    <th scope="col-lg">Next Arrival</th>
+                    <th scope="col-lg">Minutes Away</th>
+                </tr>
+            </thead>
+            <tbody id='tbody' style="background-color: beige">
+
+            </tbody>
+        </table>
+    </main>
+    <div class="jumbotron container" style="background-color: rgb(2, 120, 84)">
+        <h3>Add Train</h3>
+        <form>
+            <div class="row">
+                <div class="col">
+                    <input type="text" id="name" class="form-control">
+                    <label class="col">Train Name</label>
+                    <input type="text" id="dest" class="form-control">
+                    <label class="col">Destination</label>
+                </div>
+                <div class="col">
+                    <input type="text" id="time" class="form-control">
+                    <label class="col">First Train Time (HH:mm - military time)</label>
+                    <input type="number" id="freq" class="form-control">
+                    <label class="col">Frequency (min)</label>
+                </div>
+            </div>
+            <div class="row container">
+                <input type="button" value="Submit" class="btn btn-lg" id="submit">
+            </div>
+        </form>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
